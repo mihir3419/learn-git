@@ -1,7 +1,7 @@
 
 let app = new Vue({
     //products: products,
-    el: "#appss",
+    el: "#app",
    
     data: {
        showProduct: true,
@@ -222,21 +222,22 @@ let app = new Vue({
 
             //var letters = /^[A-Za-z]+$/;
  
-             if  (this.order.firstName.match(/[a-z]/))
+             if  (this.order.firstName.match(/[A-Za-z]/)&&this.order.mobileNum.match(/[0-9]/)&&this.order.mobileNum.length>=10)
              {
          
+               
                  return false;
-                
+                 
+                 
              }
-             
-           else if (this.order.mobileNum.match(/[0-9]/)) {
+    
 
-            return false;
-
-           }
              else {
               
+                
                  return true;
+             
+                
              }
              
              
