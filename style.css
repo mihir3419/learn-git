@@ -1,8 +1,7 @@
-
 #body{
     background-color: #ADD8E6;
     border-radius: 0%;
-    font-family: verdana;
+    font-family: Arial;
     width: 33%;
 }
 
@@ -16,6 +15,8 @@
 
 #app h1{
     color: red;
+    font-size: 40px;
+
 }
 
 #app button{
@@ -23,9 +24,11 @@
     margin-left: 20px;
     padding: 10px;
     width: 50%;
+   
 }
 
 
 #app label{
     font-size: 9px;
+    
 }
