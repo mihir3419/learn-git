@@ -7,7 +7,7 @@
      <link rel="stylesheet" href="../learn-git/style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
      <script src="https://unpkg.com/vue"></script>
-     <script src="../learn-git/lessons.js"></script><!-- Link to JS File-->
+     <script src="../learn-git/lessons.js"></script><!-- Link to lessons File-->
 
 </head>  
 
@@ -28,8 +28,7 @@
 
 
                <p>
-                  
-                    
+                                     
                      <input v-on:click='acendingPriceSort' type="radio"  id='acending' value='acending' v-model="sort" >
                      <label for="pricesort">Price Ascending </label>
                    
@@ -44,8 +43,6 @@
                      <input v-on:click='acendingSpaceSort' type="radio" value='spaceacending' v-model="sort">
                      <label for="locationsort">Space Ascending </label>
                     </p>
-
-              
                   
                     <input v-on:click='decendingPriceSort' type="radio"  id='decending' value='decending' v-model="sort">
                     <label for="decending">Price Descending</label>
@@ -63,13 +60,14 @@
       
 
  
+               <!-- data for displaying lessons -->
+
                <h1>School Club</h1>
           
                <div v-if='showProduct'>
 
                <div v-for="lesson in sortlesson">
-
-               
+              
                <img v-bind:src="lesson.image">
                <p>Subject: {{lesson.subject}}</p><!-- Get data from object using v-text-->
                <p>Location: {{lesson.location}}</p><!-- Get data from object-->
@@ -89,9 +87,7 @@
 
                <span v-else>Buy Now!</span>
                <!-- <button disabled v-else>Add To Cart</button> -->
-          
-               
-               
+                       
 
           </div>
 
@@ -126,6 +122,9 @@
                     
                     
                </div>
+
+               <!-- data displayed for checkout -->
+
                <h1>Checkout</h1>
 
                <p>
@@ -176,7 +175,7 @@
                </p>
 
            
-            
+            <!-- data displayed for order information -->
 
 
                <h3>Order Information</h3>
@@ -206,3 +205,5 @@
      
 <script src="../learn-git/index.js"></script><!-- Link to JS File-->
 </body>
+
+
