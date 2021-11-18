@@ -1,4 +1,3 @@
-//let space=10;
 let space;
 let lessons = [
     
@@ -21,7 +20,7 @@ let lessons = [
         space:  7,
         image: "https://ih1.redbubble.net/image.848787228.7084/st,small,507x507-pad,600x600,f8f8f8.jpg",
         availableInventory: 10,
-        rating: 3,
+        rating: 4,
     },
 
     {
@@ -54,7 +53,7 @@ let lessons = [
         space:  18,
         image: "https://i.pinimg.com/originals/ae/6e/02/ae6e02e25e8bdbd14e5c35e86f33b24d.jpg",
         availableInventory: 10,
-        rating: 3,
+        rating: 5,
     },
 
     {
@@ -65,7 +64,7 @@ let lessons = [
         space:  10,
         image: "https://ih1.redbubble.net/image.849473941.5273/st,small,507x507-pad,600x600,f8f8f8.u2.jpg",
         availableInventory: 10,
-        rating: 3,
+        rating: 1,
     },
 
     {
@@ -76,7 +75,7 @@ let lessons = [
         space:  8,
         image: "https://th.bing.com/th/id/R.db5f4563d84751e0a35f1f802e7afe02?rik=Tg7yrV5xZX1Ozg&pid=ImgRaw&r=0",
         availableInventory: 10,
-        rating: 3,
+        rating: 4,
     },
 
     {
@@ -87,7 +86,7 @@ let lessons = [
         space:  24,
         image: "https://ih1.redbubble.net/image.851928122.9246/poster,504x498,f8f8f8-pad,600x600,f8f8f8.jpg",
         availableInventory: 10,
-        rating: 3,
+        rating: 5,
     },
 
     {
@@ -98,7 +97,7 @@ let lessons = [
         space:  18,
         image: "https://i.pinimg.com/originals/58/6f/1a/586f1a7b6619b02636406d93cbadb9e3.png",
         availableInventory: 10,
-        rating: 3,
+        rating: 2,
     },
 
     {
@@ -109,7 +108,7 @@ let lessons = [
         space:  15,
         image: "https://ih1.redbubble.net/image.855174825.4003/st,small,507x507-pad,600x600,f8f8f8.jpg",
         availableInventory: 10,
-        rating: 3,
+        rating: 4,
     },
 
     {
@@ -120,7 +119,7 @@ let lessons = [
         space:  14,
         image: "https://i.pinimg.com/originals/60/9f/09/609f09973fa1de23b9b07bcf4fbb7687.jpg",
         availableInventory: 10,
-        rating: 3,
+        rating: 2,
     },
   
 ]
