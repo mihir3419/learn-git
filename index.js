@@ -14,7 +14,7 @@ let app = new Vue({
 
         cart: [],
 
-        order: {
+        order: { 
             firstName: '',
             lastName: '',
             address: '',
@@ -40,7 +40,7 @@ let app = new Vue({
     },
 
 
-
+// fuunctions added 
 
     methods: {
 
@@ -81,6 +81,9 @@ let app = new Vue({
             }
             return count;
         },
+
+
+        // displaying functions below for sorting subject, location, price, availablity 
 
         acendingPriceSort: function () {
             function comparsion(a, b) {
@@ -158,7 +161,7 @@ let app = new Vue({
         },
 
 
-        display() {
+        display() { // displaying messages 
             this.success = "data saved successful";
         }
 
@@ -168,7 +171,7 @@ let app = new Vue({
 
 
 
-
+// displaying computed functions below 
 
 
     computed: {
@@ -179,7 +182,7 @@ let app = new Vue({
 
         },
 
-        sortlesson() {
+        sortlesson() { // searching lessons 
             var lessons = this.lessons.filter((lessons) => {
                 return lessons.subject.toLowerCase().includes(this.filter.toLowerCase());
             });
@@ -189,7 +192,7 @@ let app = new Vue({
 
 
         },
-        submitForm() {
+        submitForm() { // submit form button
 
 
 
