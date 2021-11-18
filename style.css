@@ -1,0 +1,31 @@
+
+#body{
+    background-color: #ADD8E6;
+    border-radius: 0%;
+    font-family: verdana;
+    width: 33%;
+}
+
+#app{
+    
+    padding: 15px;
+}
+#app img{
+  width: 100%;
+}
+
+#app h1{
+    color: red;
+}
+
+#app button{
+    margin: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    width: 50%;
+}
+
+
+#app label{
+    font-size: 9px;
+}
