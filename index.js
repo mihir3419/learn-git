@@ -164,7 +164,7 @@ let app = new Vue({
 
     },
 
- 
+
 
 
 
@@ -173,46 +173,46 @@ let app = new Vue({
 
     computed: {
 
-    cartItemCount: function () {
+        cartItemCount: function () {
 
-        return this.cart.length || '';
+            return this.cart.length || '';
 
-    },
+        },
 
-    sortlesson() {
-        var lessons = this.lessons.filter((lessons) => {
-            return lessons.subject.toLowerCase().includes(this.filter.toLowerCase());
-        });
+        sortlesson() {
+            var lessons = this.lessons.filter((lessons) => {
+                return lessons.subject.toLowerCase().includes(this.filter.toLowerCase());
+            });
 
-        return lessons
-
-
-
-    },
-    submitForm() {
+            return lessons
 
 
 
-        if (this.order.firstName.match(/[A-Za-z]/) && this.order.mobileNum.match(/[0-9]/) && this.order.mobileNum.length >= 10) {
-
-
-            return false;
-
-
-        }
-
-
-        else {
-
-            return true;
-
-
-        }
+        },
+        submitForm() {
 
 
 
+            if (this.order.firstName.match(/[A-Za-z]/) && this.order.mobileNum.match(/[0-9]/) && this.order.mobileNum.length >= 10) {
 
-    },
+
+                return false;
+
+
+            }
+
+
+            else {
+
+                return true;
+
+
+            }
+
+
+
+
+        },
 
 
 
