@@ -1,5 +1,5 @@
-let space;
-let lessons = [
+let space; // defining space variable 
+let lessons = [  // lessons has array of JSON objects 
 
     {
         id: 0,
