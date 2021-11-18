@@ -1,17 +1,17 @@
 let app = new Vue({
-  
+
     el: "#app",
-   
+
     data: {
-       showProduct: true,
-       lessons: lessons,
-       space: space,
-      
-       
-       sort:'',
-       filter:'',
-      
-          
+        showProduct: true,
+        lessons: lessons,
+        space: space,
+
+
+        sort: '',
+        filter: '',
+        success: '',
+
         cart: [],
 
         order: {
@@ -23,10 +23,11 @@ let app = new Vue({
             zip: 1234,
             state: '',
             method: 'Home',
-   
+
+
         },
 
-        error: [],
+
 
         states: {
             AL: 'Alabama',
@@ -34,15 +35,16 @@ let app = new Vue({
             CA: 'California',
             NV: 'Nevada',
         },
-  
-   
+
+
     },
 
 
-   
+
+
     methods: {
 
-        addItem: function(id) {
+        addItem: function (id) {
 
             this.cart.push(id);
 
@@ -65,8 +67,8 @@ let app = new Vue({
         showCheckout() {
             this.showProduct = this.showProduct ? false : true;
         },
-        
-        canAddToCart: function(id) {
+
+        canAddToCart: function (id) {
             return lessons[id].availableInventory > this.cartCount(id);
         },
 
@@ -80,8 +82,8 @@ let app = new Vue({
             return count;
         },
 
-        acendingPriceSort: function() {
-            function comparsion (a, b) {
+        acendingPriceSort: function () {
+            function comparsion(a, b) {
                 if (a.price > b.price) return 1;
                 if (a.price < b.price) return -1;
                 return 0;
@@ -89,17 +91,17 @@ let app = new Vue({
             return this.lessons.sort(comparsion);
         },
 
-        decendingPriceSort: function() {
-            function compare (c, d) {
+        decendingPriceSort: function () {
+            function compare(c, d) {
                 if (d.price < c.price) return -1;
                 if (d.price > c.price) return 1;
-                return 0;   
+                return 0;
             }
             return this.lessons.sort(compare);
         },
 
-        acendingLocationSort: function() {
-            function comparsion (a, b) {
+        acendingLocationSort: function () {
+            function comparsion(a, b) {
                 if (a.location > b.location) return 1;
                 if (a.location < b.location) return -1;
                 return 0;
@@ -107,19 +109,19 @@ let app = new Vue({
             return this.lessons.sort(comparsion);
         },
 
-        decendingLocationSort: function() {
-            function compare (c, d) {
+        decendingLocationSort: function () {
+            function compare(c, d) {
                 if (d.location < c.location) return -1;
                 if (d.location > c.location) return 1;
-                return 0;   
+                return 0;
             }
             return this.lessons.sort(compare);
         },
 
 
-        
-        acendingSubjectSort: function() {
-            function comparsion (a, b) {
+
+        acendingSubjectSort: function () {
+            function comparsion(a, b) {
                 if (a.subject > b.subject) return 1;
                 if (a.subject < b.subject) return -1;
                 return 0;
@@ -127,18 +129,18 @@ let app = new Vue({
             return this.lessons.sort(comparsion);
         },
 
-        decendingSubjectSort: function() {
-            function compare (c, d) {
+        decendingSubjectSort: function () {
+            function compare(c, d) {
                 if (d.subject < c.subject) return -1;
                 if (d.subject > c.subject) return 1;
-                return 0;   
+                return 0;
             }
             return this.lessons.sort(compare);
         },
-        
 
-        acendingSpaceSort: function() {
-            function comparsion (a, b) {
+
+        acendingSpaceSort: function () {
+            function comparsion(a, b) {
                 if (a.space > b.space) return 1;
                 if (a.space < b.space) return -1;
                 return 0;
@@ -146,67 +148,78 @@ let app = new Vue({
             return this.lessons.sort(comparsion);
         },
 
-        decendingSpaceSort: function() {
-            function compare (c, d) {
+        decendingSpaceSort: function () {
+            function compare(c, d) {
                 if (d.space < c.space) return -1;
                 if (d.space > c.space) return 1;
-                return 0;   
+                return 0;
             }
             return this.lessons.sort(compare);
         },
-           
 
-        },
-    
+
+        display() {
+            this.success = "data saved successful";
+        }
+
+    },
+
+ 
+
+
+
+
+
 
     computed: {
 
-        cartItemCount: function() {
+    cartItemCount: function () {
 
-            return this.cart.length || '';  
+        return this.cart.length || '';
 
-        },
+    },
 
-          sortlesson(){
-            var lessons = this.lessons.filter((lessons) => {
-                return lessons.subject.toLowerCase().includes(this.filter.toLowerCase());
-              });
-            
-              return lessons
-          
-            
-            
-          },
-          submitForm () {
+    sortlesson() {
+        var lessons = this.lessons.filter((lessons) => {
+            return lessons.subject.toLowerCase().includes(this.filter.toLowerCase());
+        });
 
-          
- 
-             if  (this.order.firstName.match(/[A-Za-z]/)&&this.order.mobileNum.match(/[0-9]/)&&this.order.mobileNum.length>=10)
-             {
-         
-               
-                 return false;
-                 
-                 
-             }
-    
+        return lessons
 
-             else {
-              
-                
-                 return true;
-             
-                
-             }
-             
-             
-         }
 
-      
-          
+
+    },
+    submitForm() {
+
+
+
+        if (this.order.firstName.match(/[A-Za-z]/) && this.order.mobileNum.match(/[0-9]/) && this.order.mobileNum.length >= 10) {
+
+
+            return false;
+
+
         }
-      })
-          
+
+
+        else {
+
+            return true;
+
+
+        }
+
+
+
+
+    },
+
+
+
+    }
+
+});
+
 
 
 
