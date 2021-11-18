@@ -1,13 +1,12 @@
-
 let app = new Vue({
-    //products: products,
+  
     el: "#app",
    
     data: {
        showProduct: true,
        lessons: lessons,
        space: space,
-       //select: 'pricesort',
+      
        
        sort:'',
        filter:'',
@@ -24,8 +23,7 @@ let app = new Vue({
             zip: 1234,
             state: '',
             method: 'Home',
-            gift: false,
-            sendGift: 'Send as a gift.'
+   
         },
 
         error: [],
@@ -36,37 +34,13 @@ let app = new Vue({
             CA: 'California',
             NV: 'Nevada',
         },
-
-        // submitForm() {
-            
-        //     if (this.firstName === null) {
-                
-        //         alert('fill up the name field');
-        //         return true;
-        //     }
-
-        //     else {
-        //         return false;
-        //     }
-                
-        
-        // },
-
-
- 
-        
+  
    
     },
 
 
    
     methods: {
-        //  This function decrease the value of stock by 1 every time user click Button
-
-        // addItem: function () {
-        //     if (space > 0) {
-        //         this.space = --space;
-        //     },
 
         addItem: function(id) {
 
@@ -180,24 +154,9 @@ let app = new Vue({
             }
             return this.lessons.sort(compare);
         },
-        
-        // selectoption() {
-
-        //     this.select="acending";
-            
-        //     console.log("");
-                       
-            
-        //             }
-
-        
-        
+           
 
         },
-
-
-    
-
     
 
     computed: {
@@ -220,7 +179,7 @@ let app = new Vue({
           },
           submitForm () {
 
-            //var letters = /^[A-Za-z]+$/;
+          
  
              if  (this.order.firstName.match(/[A-Za-z]/)&&this.order.mobileNum.match(/[0-9]/)&&this.order.mobileNum.length>=10)
              {
@@ -249,15 +208,6 @@ let app = new Vue({
       })
           
 
-
- 
-
-   
-        
-    //     isDisabled() {
-    //         return this.stock === 0
-    //     } 
-     
 
 
 
