@@ -4,10 +4,10 @@
 <head>
      <meta charset="UTF-8">
      <title> Subject Details</title>
-     <link rel="stylesheet" href="../learn-git/style.css">
+     <link rel="stylesheet" href="/style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> <!-- Link to CSS stylesheet File-->
      <script src="https://unpkg.com/vue"></script>  <!-- Link to Vue File-->
-     <script src="../learn-git/lessons.js"></script><!-- Link to lessons File-->
+     <script src="/lessons.js"></script><!-- Link to lessons File-->
 
 </head>  
 
@@ -111,13 +111,13 @@
      
                     <button type="button" v-on:click="removeItem(lesson.id)" >Remove</button>
 
-                    <span v-if='lesson.availableInventory === cartCount(lesson.id)'> All out!</span>
+                    <span v-if='lesson.availableInventory === cartCount(lesson.id)'> </span>
 
                     <span v-else-if='lesson.availableInventory - cartCount(lesson.id) < 5'>
-                         Only {{lesson.availableInventory - cartCount(lesson.id)}} left!
+                         Only {{lesson.availableInventory - cartCount(lesson.id)}} 
                     </span>
           
-                    <span v-else>Buy Now!</span>
+                   
 
                     
                     
@@ -203,7 +203,7 @@
 
      </div>
      
-<script src="../learn-git/index.js"></script><!-- Link to JS File-->
+<script src="/index.js"></script><!-- Link to JS File-->
 </body>
 
 
